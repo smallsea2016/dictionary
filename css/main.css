@@ -58,8 +58,15 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .p20-15 {padding: 2rem 1.5rem;font-size:1rem;color:#323a45;}
 .swiper_tab {margin-top: -2rem;}
 .swiper_tab>li {padding-right: 2.5rem;}
-.swiper_tab>li a {display: block;padding-top:2rem;padding-bottom: 2rem;border-bottom:2px solid transparent;font-size: 1.2rem;}
-.swiper_tab>li.active a{border-bottom-color:#00d6d6;color:#00d6d6;/*box-shadow:0 2.5px 5px rgba(0,0,0,0.20);*/}
+.swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;}
+.swiper_tab>li.active a {color:#00d6d6;}
+.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
+  border-radius: 5px;background-clip: padding-box
+}
+.swiper_tab>li.active a:after{position: absolute;
+  content: '';bottom: -5px;left: 0;right: 0;height:5px;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
+}
 
 .boxModal {display: box;display: -webkit-box;display: -moz-box;}
 /*swiper*/

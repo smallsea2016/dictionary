@@ -35,6 +35,26 @@ $("#js-swiper-tab>li").on('touchstart mousedown',function(){
 })
 
 
+//加载数据
+var vm = new Vue({
+  el: "#dictionary_section",
+  data:{
+    items:"",
+  },
+  created:function(){
+	    var url="js/data.json";
+	    var _this = this;
+	    this.$http.get(url).then(function(response){
+	    	console.log("_this.data:"+_this.data);
+	        _this.data = response.body.dictionary;
+	        
+	        console.log('response:'+response.body.dictionary[0]);
+	    },function(response){
+	        console.info(response);
+	    })
+	}
+}) 
+
 /*伸缩内容*/
 function toggleContent(_this){
     var item = $(_this).parents('.dict_list').find('[data-role="toggle_item"]'),
