@@ -1,0 +1,47 @@
+/*
+-------------------------------
+    Company: 道一公司
+    Author:  smallsea
+    Time:   2016-05-06
+-------------------------------
+*/
+
+/*=======CSS reset start=======*/
+@charset "utf-8";
+html {font-size:62.5%;}
+html,body{width:100%;height:100%;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:transparent;word-wrap:break-word;word-break:break-all;}	
+body {-webkit-overflow-scrolling:touch;font:14px/1.5 STHeitiSC-Light, Verdana, Microsoft YaHei, Helvetica, Arial, Hiragino Sans GB, sans-serif, Simsun;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr{margin:0;padding:0; }
+table{border-collapse:collapse; border-spacing:0;}
+fieldset,img,input,select,textarea,button,abbr{border:0 none;}
+caption,th,cite,em,strong,var,b,i,code,dfn,address{font-style:normal;}
+caption,th,em,strong,b {font-weight:normal;}
+ol,ul,li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+input,textarea,optgroup,option,select,button{vertical-align: middle;font:inherit;}	/*文本域默认是不会继承其他字体的样式的，所以设置继承上级字体样式*/
+textarea {resize:none;}
+input[type="button"],input[type="submit"],input[type="reset"],input[type="search"],select,button {appearance:none;-webkit-appearance:none;}
+input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration { display: none; }    /*清除搜索框默认的叉叉*/
+input[disabled] {background-color: transparent;}
+select,input[type="number"] {-moz-appearance:none;-webkit-appearance:none;}
+button,input[type="submit"],input[type="button"] {cursor:pointer;}
+select,input {border-radius: 0}
+a, a:active, :focus {outline:none}
+a {text-decoration:none;color:#333;}
+a:hover{text-decoration:none;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;margin:0;padding: 0}	/* 设置HTML5元素为块 */
+img,embed,video,object,iframe {max-width:100%;vertical-align:middle;}   
+code, kbd, pre, samp { font-family: monospace;}
+pre{
+    word-break: break-all;
+    word-wrap: break-word;
+} 
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+/*=======CSS reset end=======*/

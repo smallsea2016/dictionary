@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>蔚来汽车</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="keywords" content="蔚来汽车"/>
+    <meta name="description" content="蔚来汽车"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript">
+        window.onload = function(){
+            if (document.body.clientWidth < 640) {
+                document.getElementsByTagName('html')[0].style.fontSize = (document.body.clientWidth * 10)/375+'px'
+            };
+        }
+    </script>
+</head>
+<body class="bgWhite">
+    <div id="wrap">
+        <div id="main" data-role="js-cover-bg">
+            <figure class="logo_control"><img src="images/icon/logo.png"></figure>
+            <section class="search_control">
+                <div class="tc pb10">
+                    <ul class="search_type">
+                        <li class="">PEOPLE   |   </li>
+                        <li class="">DICTIONARY   |   </li>
+                        <li class="">NIO FAQ</li>
+                    </ul>
+                </div>
+                <form method="" action="search_result.html" onsubmit="doSearch()">
+                    <ul class="primary_search_box flexbox">
+                        <li class="flexItem primary_search_wrap"><input class="primary_search_item" type="text"></li>
+                        <li class="flexCenter pl20 pr20"><a href="javascript:doSearch();" class="primary_search_icon"></a></li>
+                    </ul>
+                </form>
+            </section>
+            <aside class="I_want">Hey, <br>
+            I wanna <br>
+            search
+            </aside>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <!--loading-->
+    <script type="text/javascript" src="js/loading.js"></script>
+    <script type="text/javascript">
+        /*随机大图*/
+        function CreatRoundCoverBg(){
+            var arr = ["Background.jpg","Background2.jpg","Background3.jpg","Background4.jpg","Background5.jpg"];
+            var _random = Math.floor(Math.random() * arr.length);
+            console.log(_random);
+            $('[data-role="js-cover-bg"]').css({
+                background:'url(images/icon/'+arr[_random]+') no-repeat center',
+                backgroundSize:'cover'
+            })
+        }
+        CreatRoundCoverBg()
+
+        /*搜索*/
+        function doSearch(){
+            location.href = "search_result.html";
+            return false;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>蔚来汽车</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="Cache-Control" CONTENT="no-cache">
+    <meta http-equiv="Pragma" CONTENT="no-cache">
+    <meta name="keywords" content="蔚来汽车"/>
+    <meta name="description" content="蔚来汽车"/>
+    <link rel="stylesheet" type="text/css" href="css/ku.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript">
+        window.onload = function(){
+            if (document.body.clientWidth < 640) {
+                document.getElementsByTagName('html')[0].style.fontSize = (document.body.clientWidth * 10)/375+'px'
+            };
+        }
+    </script>
+</head>
+<body class="bgWhite">
+    <div id="wrap">
+        <header class="abs_top" id="header">
+            <form>
+                <section class="flexbox search_wrap">
+                    <div class="flexbox_item search_item">
+                        <input class="search_ipt" type="search" placeholder="SEARCH BY KEY WORDS"/>
+                    </div>
+                    <div class="flexbox_center">
+                        <a href="javascript:toggleEN();" class="EN_menu"></a>
+                    </div>
+                </section>
+            </form>
+        </header>
+        <div id="main" class="nice_scroll">
+            <div style="height:5.8rem"></div>
+            <ul class="address_list no_arrow" id="address_list">
+            </ul>
+            <div id="bottom_height" style="height:5rem"></div>
+        </div>
+    </div>
+
+    <!--通讯录字母检索-->
+    <aside id="letter_search">
+        <div class="letter_list hide">
+            <ul class="clearfix">
+                <li> <a href="javascript:searchLetter('A')">A</a></li>
+                <li> <a href="javascript:searchLetter('B')">B</a></li>
+                <li> <a href="javascript:searchLetter('C')">C</a></li>
+                <li> <a href="javascript:searchLetter('D')">D</a></li>
+                <li> <a href="javascript:searchLetter('E')">E</a></li>
+                <li> <a href="javascript:searchLetter('F')">F</a></li>
+                <li> <a href="javascript:searchLetter('G')">G</a></li>
+                <li> <a href="javascript:searchLetter('H')">H</a></li>
+                <li> <a href="javascript:searchLetter('I')">I</a></li>
+                <li> <a href="javascript:searchLetter('J')">J</a></li>
+                <li> <a href="javascript:searchLetter('K')">K</a></li>
+                <li> <a href="javascript:searchLetter('L')">L</a></li>
+                <li> <a href="javascript:searchLetter('M')">M</a></li>
+                <li> <a href="javascript:searchLetter('N')">N</a></li>
+                <li> <a href="javascript:searchLetter('O')">O</a></li>
+                <li> <a href="javascript:searchLetter('P')">P</a></li>
+                <li> <a href="javascript:searchLetter('Q')">Q</a></li>
+                <li> <a href="javascript:searchLetter('R')">R</a></li>
+                <li> <a href="javascript:searchLetter('S')">S</a></li>
+                <li> <a href="javascript:searchLetter('T')">T</a></li>
+                <li> <a href="javascript:searchLetter('U')">U</a></li>
+                <li> <a href="javascript:searchLetter('V')">V</a></li>
+                <li> <a href="javascript:searchLetter('W')">W</a></li>
+                <li> <a href="javascript:searchLetter('X')">X</a></li>
+                <li> <a href="javascript:searchLetter('Y')">Y</a></li>
+                <li> <a href="javascript:searchLetter('Z');toggleEN(false);">Z</a></li>
+                <li> <a href="javascript:searchAll()" style="font-size: 30px;">*</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!--选人图标-->
+    <a href="javascript:selectStart();" class="p_action"></a>
+
+    <!--选人之后显示-->
+    <footer class="abs_bottom" id="selectedPeople" style="display: none">
+        <section class="flexbox person_list_wrap">
+            <ul class="flexbox_item person_list" id="person_list">
+                
+            </ul>
+            <div class="">
+                <a href="javascript:showPersonList();" class="up_arrow"></a>
+            </div>
+        </section>
+        <ul class="flexbox footer_btn">
+            <li class="flexbox_item"><button class="deep_primary_btn" id="cancel">CANCEL</button></li>
+            <li class="flexbox_item"><button class="primary_btn" id="submit_btn">BUILD</button></li>
+        </ul>
+    </footer>
+       
+    <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+    <!--loading-->
+    <script type="text/javascript" src="js/loading.js"></script>
+    <!--企微的js-->
+    <script type="text/javascript" src="js/common.js"></script>
+     <!--mockjs 模拟随机数据（进入开发阶段，不用引入）-->
+    <script src="http://mockjs.com/dist/mock.js"></script>
+    <script type="text/javascript" src="js/people_details.js"></script>
+</body>
+</html>
