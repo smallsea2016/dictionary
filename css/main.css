@@ -38,23 +38,9 @@
 .nice_scroll::-webkit-scrollbar-resizer {
     background:#FF0BEE;
     }
-
-/*下拉刷新*/
-.refresh_top {position: absolute;left: 0;right: 0;top:20px;text-align: center;color: #656565}
-
 /*图标*/
 i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 
-.menu_ico {background: url(../images/icon/menu.png) no-repeat;background-size: contain;}
-.plus_ico {position: absolute;right: 1.2rem;bottom: 4.5rem;width: 7.3rem;height:7.3rem;
-  background: url(../images/icon/add.png) no-repeat;background-size: contain;
-}
-.wx_ico {display: inline-block;vertical-align: middle;width: 2.3rem;height: 2.3rem;
-  background: url(../images/icon/wx.png) no-repeat;background-size: contain;
-}
-.tel_ico {display: inline-block;vertical-align: middle;width: 2.3rem;height: 2.3rem;
-  background: url(../images/icon/tel.png) no-repeat;background-size: contain;
-}
 
 /*搜索*/
 .search_wrap {padding:.75rem 1.5rem;background-color: #00d6d6;}
@@ -85,8 +71,12 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .swiper-scrollbar-drag {height: 2px;background:#00D6D6;}
 
 .dict_list>li {position: relative;}
-.list_section_r {position: absolute;right: 0;top:2.5rem;right: 1.5rem}
-.list_section {padding: 2rem 1.5rem;border-bottom: 1px solid #ececec}
+.list_section_r {position: absolute;top:2.5rem;right: 1.5rem}
+.list_section {position: relative;padding: 2rem 1.5rem;}
+.list_section:after {content: '';position: absolute;left: 1.5rem;right: 1.5rem;bottom: 0;
+  border-bottom: 1px solid #ececec
+}
+
 .list_name {margin-bottom: .5rem}
 .list_con {padding-left: 1.25rem}
 .list_dept {font-size: 1rem;color:#747c83; }
@@ -108,7 +98,10 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .contact_tt {font-weight: bold;font-size:1.2rem;color:#4f677d;margin-bottom: .5rem}
 .contact_con {font-size: 1.2rem}
 strong.contact_tt {margin-bottom: 0}
-
+.people_info {position: relative;}
+.save_action {position: absolute;right: 1.5rem;top:50%;
+  transform:translateY(-50%);-webkit-transform:translateY(-50%);
+}
 
 .dict_info,
 .FAQ_info {padding-left: 1.5rem}

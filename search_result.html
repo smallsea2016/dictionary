@@ -28,7 +28,7 @@
                 <section class="search_wrap">
                     <a href="javascript:history.go(-1);" class="go_back"></a>
                     <ul class="flexbox search_item">
-                        <li class="flexItem"><input class="search_ipt" oninput="onInput(this)" type="search" placeholder="SEARCH BY KEY WORDS"/></li>
+                        <li class="flexItem"><input class="search_ipt" oninput="onInput(this)" type="search" placeholder="SEARCH BY KEYWORDS"/></li>
                         <li class="flexCenter mr10" data-role="js-hide-del" style="display: none"><a href="javascript:clearValue();" class="search_del"></a></li>
                     </ul>
                 </section>
@@ -38,7 +38,7 @@
             <div style="height:5rem"></div>
             <div class="main_inner">
                 <div class="p20-15">我们为您搜索到以下有关<mark class="search_mark">EE</mark>的信息：</div>
-                <div class="pl15 pr15">
+                <div class="pl15 pr15" id="arrays">
                     <ul class="swiper_tab flexbox" id="js-swiper-tab">
                         <li class="active"><a href="javascript:;">PEOPLE</a></li>
                         <li><a href="javascript:;">DICTIONARY</a></li>
@@ -59,7 +59,7 @@
                                             <p class="list_dept f10">Digital Operations</p>
                                         </div>
                                     </section>
-                                    <article class="flexbox people_info" data-role="toggle_item">
+                                    <article class="people_info" data-role="toggle_item">
                                         <div class="flexItem">
                                             <dl class="contact">
                                                 <dt class="contact_tt">EMAIL</dt>
@@ -78,7 +78,7 @@
                                                 <dd class="contact_con">2158</dd>
                                             </dl>
                                         </div>
-                                        <div class="flexCenter">
+                                        <div class="save_action">
                                             <a href="javascript:;" class="db">
                                                 <i class="save_icon"></i>
                                                 <p>SAVE</p>
@@ -87,7 +87,7 @@
                                     </article>                                
                                     <div class="list_section_r">
                                         <a href="javascript:;" class="wx_icon"></a>
-                                        <a href="javascript:;" class="tel_icon"></a>
+                                        <a href="tel:13800138000" class="tel_icon"></a>
                                     </div>
                                 </li>
                                 <li>
@@ -98,7 +98,7 @@
                                             <p class="list_dept f10">Digital Operations</p>
                                         </div>
                                     </section>
-                                    <article class="flexbox people_info" data-role="toggle_item">
+                                    <article class="people_info" data-role="toggle_item">
                                         <div class="flexItem">
                                             <dl class="contact">
                                                 <dt class="contact_tt">EMAIL</dt>
@@ -117,7 +117,7 @@
                                                 <dd class="contact_con">2158</dd>
                                             </dl>
                                         </div>
-                                        <div class="flexCenter">
+                                        <div class="save_action">
                                             <a href="javascript:;" class="db">
                                                 <i class="save_icon"></i>
                                                 <p>SAVE</p>
@@ -126,7 +126,7 @@
                                     </article>
                                     <div class="list_section_r">
                                         <a href="javascript:;" class="wx_icon"></a>
-                                        <a href="javascript:;" class="tel_icon"></a>
+                                        <a href="tel:13800138000" class="tel_icon"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -188,6 +188,7 @@
                 </div>
             </div>
 
+            <!--没有搜索到结果-->
             <aside class="attention" style="display: none">
                 <img src="images/icon/attention-icon.png">
                 <p>没有搜索到相关信息换个关键词试试</p>
@@ -199,58 +200,6 @@
     <!--loading-->
     <script type="text/javascript" src="js/loading.js"></script>
     <script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
-    <script type="text/javascript">
-        /*搜索控制*/
-        function onInput(_this){
-            var len = _this.value.length;
-            if(len){
-                $('[data-role="js-hide-del"]').show();
-            }else{
-                $('[data-role="js-hide-del"]').hide();
-            }
-        }
-
-        function clearValue(){
-            $('.search_ipt').val('');
-            $('[data-role="js-hide-del"]').hide();
-        }
-        function search(){
-            console.log('搜索');
-            return  false
-        }
-        /*阻止冒泡*/
-        function _preventDefault(e){
-            e.preventDefault();
-            e.stopPropagation()
-        }
-
-       /*tab手势切换*/
-        var tabSwiper = new Swiper('.swiper-container',{
-            // scrollbar:'.swiper-scrollbar',
-            // scrollbarHide:false,
-            onSlideChangeStart: function(){
-              $("#js-swiper-tab>li.active").removeClass('active');
-              $("#js-swiper-tab>li").eq(tabSwiper.activeIndex).addClass('active');
-            }
-        }); 
-
-        $("#js-swiper-tab>li").on('touchstart mousedown',function(){
-            $("#js-swiper-tab>li.active").removeClass('active');
-            $(this).addClass('active');
-            tabSwiper._slideTo($(this).index());
-        })
-
-        /*伸缩内容*/
-        function toggleContent(_this){
-            var item = $('[data-role="toggle_item"]'),
-                currItem = $(_this).next('[data-role="toggle_item"]');
-            item.not(currItem).hide();
-            currItem.slideToggle();
-            var pos = $(_this).offset().top,
-                scrollTop = $(_this).scrollTop();
-            console.log('pos:'+pos);
-            $('#main').scrollTop(pos+scrollTop);
-        }
-    </script>
+    <script type="text/javascript" src="js/search_result.js"></script>
 </body>
 </html>

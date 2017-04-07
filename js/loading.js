@@ -11,10 +11,10 @@
 				webkitTransform:'translate(-50%,-50%)',
 				zIndex:'10000',
 				width:'160px',
-				height:'65px',
+				height:'80px',
 				padding:'10px',
 				text:"",
-				background:'rgba(0,0,0,.5)',
+				background:'rgba(0, 15, 22,.7)',
 				color:'white',
 				fontSize:'16px',
 				borderRadius:'5px',
@@ -24,9 +24,12 @@
 			if(obj.place == "bottom"){
 				str += '<div id="_loadingMask" style="width:'+obj.width+';padding:5px;background:'+obj.background+';position:'+obj.position+';left:'+obj.left+';bottom:'+obj.bottom+'px;transform:translateX(-50%);-webkit-transform:translateX(-50%);z-index:'+obj.zIndex+';color:'+obj.color+';font-size:'+obj.fontSize+';border-radius:'+obj.borderRadius+'"><div style="text-align:center"><i class="loading_animation" style="width:25px;height:25px;"></i><b class="ml10 ib">'+obj.text+'</b></div></div>';
 			}else{
-				str += '<div id="_loadingMaskWrap" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:9999"></div><div id="_loadingMask" style="width:'+obj.height+';height:'+obj.height+';padding:'+obj.padding+';background:rgba(0, 0, 0,.5);position:'+obj.position+';left:'+obj.left+';top:'+obj.top+';transform:'+obj.transform+';-webkit-transform:'+obj.webkitTransform+';z-index:'+obj.zIndex+';color:'+obj.color+';font-size:'+obj.fontSize+';border-radius:'+obj.borderRadius+'"><div class="centerBoxModal"><i class="loading_animation"></i><p style="font-size:12px">'+obj.text+'</p></div>';
+				str += '<div id="_loadingMaskWrap" style="position:fixed;left:0;top:0;width:100%;height:100%;z-index:9999;background:'+obj.background+';"></div><div id="_loadingMask" style="width:'+obj.height+';height:'+obj.height+';padding:'+obj.padding+';position:'+obj.position+';left:'+obj.left+';top:'+obj.top+';transform:'+obj.transform+';-webkit-transform:'+obj.webkitTransform+';z-index:'+obj.zIndex+';color:'+obj.color+';font-size:'+obj.fontSize+';border-radius:'+obj.borderRadius+'"><div class="centerBoxModal"><i class="loading_animation"></i><p style="font-size:12px">'+obj.text+'</p></div>';
 			}
-			$('body').append(str);
+			if (!$('#_loadingMaskWrap').length) {
+				$('body').append(str);
+			};
+			
 		},
 		hide:function(){
 			$('#_loadingMaskWrap, #_loadingMask').remove();
@@ -66,3 +69,30 @@ function errorTips(text){
 	})
 }
 
+/**
+  * 提交提示
+  * @param states 成功为1，失败为0
+  * @param str 成功或失败的提示文字
+*/
+function toast(states,str){
+  str = str || '提交状态';
+  if(! $('#ui_toast').length){
+	  	var toast = '';
+			   toast+= '<div class="ui_toast" id="ui_toast">';
+	       toast+=   '<i class="toast_ico toast_faild_ico"></i>';
+	       toast+=   '<p class="toast_text">'+str+'</p>';
+	       toast+=  '</div>';
+      $('body').append(toast);
+    }else{
+      $('#ui_toast').show();
+      $('.toast_text').text(str);
+    }
+    if(states == 1){
+      	$('.toast_ico').addClass('toast_succeed_ico').removeClass('toast_faild_ico')
+  	};
+	var t;
+  	clearTimeout(t);
+    t = setTimeout(function(){
+    	$('#ui_toast').remove();
+    },1500);
+}
