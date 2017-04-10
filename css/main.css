@@ -56,14 +56,15 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 
 .search_mark {padding-left: .5rem;padding-right: .5rem;color: #00d6d6;background: transparent;}
 .p20-15 {padding: 2rem 1.5rem;font-size:1rem;color:#323a45;}
-.swiper_tab {margin-top: -2rem;}
-.swiper_tab>li {padding-right: 2.5rem;}
+.swiper_tab_wrap {margin-left: 1.5rem;margin-right: 1.5rem;border-bottom: 1px solid #ececec;}
+.swiper_tab {margin-top: -2rem;display: table;}
+.swiper_tab>li {padding-right: 2.5rem;display: table-cell;}
 .swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;}
 .swiper_tab>li.active a {color:#00d6d6;}
 /*.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
   border-radius: 5px;background-clip: padding-box
 }
-.swiper_tab>li.active a:after{position: absolute;
+.swiper_tab>li.active a:after {position: absolute;
   content: '';bottom: -5px;left: 0;right: 0;height:5px;
   background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
 }*/
@@ -75,7 +76,11 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
     overflow: hidden;
 }
 .swiper-scrollbar {height: 2px;margin-top: -2px;}
-.swiper-scrollbar-drag {height: 2px;background:#00D6D6;}
+.swiper-scrollbar-drag {height: 2px;background:#00D6D6;position: relative;}
+.swiper-scrollbar-drag:after {position: absolute;
+  content: '';bottom: -5px;left: 0;right: 0;height:5px;
+  background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
+}
 
 .dict_list>li {position: relative;}
 .list_section_r {position: absolute;top:2.5rem;right: 1.5rem}
@@ -83,6 +88,9 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .list_section:after {content: '';position: absolute;left: 1.5rem;right: 1.5rem;bottom: 0;
   border-bottom: 1px solid #ececec
 }
+.list_section_r .wx_icon,
+.list_section_r .tel_icon {float: left;display: inline;}
+.list_section_r .wx_icon {margin-right: 1.3rem}
 
 .list_name {margin-bottom: .5rem}
 .list_con {padding-left: 1.25rem}
@@ -96,7 +104,6 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
   background: url(../images/icon/icon-tel.png) no-repeat;background-size: contain;
 }
 .avator {width: 4rem;height: 4rem;border-radius: 100%;background-clip: padding-box}
-.dict_list .wx_icon {margin-right: .5rem}
 .save_icon {width: 3.2rem;height: 2.6rem;margin-bottom: .5rem;
   background: url(../images/icon/savecontact2.png) no-repeat;background-size: contain;
 }
@@ -104,6 +111,7 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .people_info,
 .dict_list .contact {padding-top: 1rem;padding-bottom: 1rem}
 .people_info {display: none;padding-left: 6.75rem;padding-right: 1.5rem;background-color:#f8f8f8;/*transition:all .3s*/}
+.people_info .contact_tt {letter-spacing: .2rem}
 .contact_tt {font-weight: bold;font-size:1.2rem;color:#4f677d;margin-bottom: .5rem}
 .contact_con {font-size: 1.2rem}
 strong.contact_tt {margin-bottom: 0}
@@ -137,11 +145,12 @@ body .weui_dialog_ft:after {border-top-color:#a0a0a0 }
 .logo_control {padding-top:4.8rem;text-align: center;}
 .logo_control img {height: 2.6rem}
 .search_type {display: inline-block;vertical-align: middle;font-size:1.3rem;color:#fff;letter-spacing:.18rem;}
-.search_type>li {display: inline-block;}
+.search_type>li {display: inline-block;font-family: arial;}
 .search_control,
 .I_want {position: absolute;left: 2.25rem;right: 2.25rem;top:50%;
   transform: translateY(-50%);-webkit-transform: translateY(-50%)
 }
+.search_control {margin-top: -1.6rem}
 .primary_search_box {padding: 1rem;background:rgba(255,255,255,0.10);}
 .primary_search_box li {background-color: #fff;}
 .primary_search_wrap {padding-top: 1rem;padding-bottom: 1rem;position: relative;}
@@ -150,6 +159,7 @@ body .weui_dialog_ft:after {border-top-color:#a0a0a0 }
 .primary_search_icon {display: inline-block;vertical-align: middle;width: 2.1rem;height: 2.1rem;background: url(../images/icon/Shape.png) no-repeat;
   background-size: contain
 }
-.I_want {left: 4.8rem;right: 4.8rem;margin-top:13.75rem;font-size:3.3rem;color:#fff;font-family: arial;
-  text-transform:uppercase;
+.I_want {left: 4.8rem;right: 4.8rem;margin-top:12rem;/*font-size:3.3rem;color:#fff;font-family: arial;
+  text-transform:uppercase;*/
 }
+.I_want img {width: 14.3rem}
