@@ -61,7 +61,7 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .swiper_tab>li {padding-right: 2.5rem;display: table-cell;}
 .swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;font-weight: bold;}
 .swiper_tab>li.active a {color:#00d6d6;-webkit-user-select:none;}
-.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
+.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: -1px;height: 2px;background-color:#00d6d6;
   border-radius: 5px;background-clip: padding-box
 }
 .swiper_tab>li.active a:after {position: absolute;
