@@ -103,6 +103,8 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .tel_icon {
   background: url(../images/icon/icon-tel.png) no-repeat;background-size: contain;
 }
+.wx_icon:hover,
+.tel_icon:hover {-webkit-transform: scale(1);transform: scale(1);}
 .avator {width: 4rem;height: 4rem;border-radius: 100%;background-clip: padding-box}
 .save_icon {width: 3.2rem;height: 2.6rem;margin-bottom: .5rem;
   background: url(../images/icon/savecontact2.png) no-repeat;background-size: contain;
