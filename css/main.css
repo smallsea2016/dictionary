@@ -59,21 +59,21 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .swiper_tab_wrap {margin-left: 1.5rem;margin-right: 1.5rem;border-bottom: 1px solid #ececec;}
 .swiper_tab {margin-top: -2rem;display: table;}
 .swiper_tab>li {padding-right: 2.5rem;display: table-cell;}
-.swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;}
+.swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;font-weight: bold;}
 .swiper_tab>li.active a {color:#00d6d6;}
-/*.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
+.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
   border-radius: 5px;background-clip: padding-box
 }
 .swiper_tab>li.active a:after {position: absolute;
   content: '';bottom: -5px;left: 0;right: 0;height:5px;
   background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
-}*/
+}
 
 .boxModal {display: box;display: -webkit-box;display: -moz-box;}
 /*swiper*/
 .swiper-container {
   position: relative;
-    overflow: hidden;
+  overflow: hidden;
 }
 .swiper-scrollbar {height: 2px;margin-top: -2px;}
 .swiper-scrollbar-drag {height: 2px;background:#00D6D6;position: relative;}
@@ -82,7 +82,7 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
   background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
 }
 
-.dict_list>li {position: relative;}
+.dict_list>li {position: relative;font-size: 1.3rem}
 .list_section_r {position: absolute;top:2.5rem;right: 1.5rem}
 .list_section {position: relative;padding: 2rem 1.5rem;}
 .list_section:after {content: '';position: absolute;left: 1.5rem;right: 1.5rem;bottom: 0;
@@ -112,8 +112,8 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .dict_list .contact {padding-top: 1rem;padding-bottom: 1rem}
 .people_info {display: none;padding-left: 6.75rem;padding-right: 1.5rem;background-color:#f8f8f8;/*transition:all .3s*/}
 .people_info .contact_tt {letter-spacing: .2rem}
-.contact_tt {font-weight: bold;font-size:1.2rem;color:#4f677d;margin-bottom: .5rem}
-.contact_con {font-size: 1.2rem}
+.contact_tt {font-weight: bold;color:#4f677d;margin-bottom: .5rem}
+/*.contact_con {font-size: 1.2rem}*/
 strong.contact_tt {margin-bottom: 0}
 .people_info {position: relative;}
 .save_action {position: absolute;right: 1.5rem;top:50%;
@@ -124,7 +124,7 @@ strong.contact_tt {margin-bottom: 0}
 .FAQ_info {padding-left: 1.5rem}
 .dict_info .contact_con,
 .FAQ_info .contact_con {margin-top: 1rem}
-
+.dict_info .contact_tt {letter-spacing: 0}
 .attention {position: absolute;left: 0;right: 0;top:18rem;text-align: center;}
 .attention img {width: 2.5rem;margin-bottom: 1.5rem}
 .attention img+p {color:#747c83;font-size: 1.2rem}
@@ -146,6 +146,7 @@ body .weui_dialog_ft:after {border-top-color:#a0a0a0 }
 .logo_control img {height: 2.6rem}
 .search_type {display: inline-block;vertical-align: middle;font-size:1.3rem;color:#fff;letter-spacing:.18rem;}
 .search_type>li {display: inline-block;font-family: arial;}
+.dictionary_cat {width: 29.5rem}
 .search_control,
 .I_want {position: absolute;left: 2.25rem;right: 2.25rem;top:50%;
   transform: translateY(-50%);-webkit-transform: translateY(-50%)

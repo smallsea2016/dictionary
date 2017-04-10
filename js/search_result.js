@@ -20,8 +20,8 @@ function search(){
 
 /*tab手势切换*/
 var tabSwiper = new Swiper('.swiper-container',{
-    scrollbar:'.swiper-scrollbar',
-    scrollbarHide:false,
+    // scrollbar:'.swiper-scrollbar',
+    // scrollbarHide:false,
     onSlideChangeStart: function(){
       $("#js-swiper-tab>li.active").removeClass('active');
       $("#js-swiper-tab>li").eq(tabSwiper.activeIndex).addClass('active');
