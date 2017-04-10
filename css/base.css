@@ -26,9 +26,9 @@ input[disabled] {background-color: transparent;}
 select,input[type="number"] {-moz-appearance:none;-webkit-appearance:none;}
 button,input[type="submit"],input[type="button"] {cursor:pointer;}
 select,input {border-radius: 0}
-/*a, a:active, :focus {outline:none}*/
+a, a:active, :focus {outline:none}
 a {text-decoration:none;color:#333;}
-/*a:hover{text-decoration:none;}*/
+a:hover{text-decoration:none;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {display:block;margin:0;padding: 0}	/* 设置HTML5元素为块 */
 img,embed,video,object,iframe {max-width:100%;vertical-align:middle;}   
 code, kbd, pre, samp { font-family: monospace;}
