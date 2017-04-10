@@ -65,8 +65,9 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
   border-radius: 5px;background-clip: padding-box
 }
 .swiper_tab>li.active a:after {position: absolute;
-  content: '';bottom: -5px;left: 0;right: 0;height:5px;
-  background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
+  content: '';bottom: 0;left: 0;right: 0;height:5px;
+  /*background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))*/
+  box-shadow:0 3px 5px 0 rgba(0,0,0,0.20);
 }
 
 .boxModal {display: box;display: -webkit-box;display: -moz-box;}
@@ -162,7 +163,7 @@ body .weui_dialog_ft:after {border-top-color:#a0a0a0 }
 .primary_search_icon {display: inline-block;vertical-align: middle;width: 2.1rem;height: 2.1rem;background: url(../images/icon/Shape.png) no-repeat;
   background-size: contain
 }
-.I_want {left: 4.8rem;right: 4.8rem;margin-top:12rem;/*font-size:3.3rem;color:#fff;font-family: arial;
+.I_want {left: 4.8rem;right: 4.8rem;margin-top:14.75rem;/*font-size:3.3rem;color:#fff;font-family: arial;
   text-transform:uppercase;*/
 }
 .I_want img {width: 14.3rem}
