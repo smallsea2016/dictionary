@@ -60,7 +60,7 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .swiper_tab {margin-top: -2rem;display: table;}
 .swiper_tab>li {padding-right: 2.5rem;display: table-cell;}
 .swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;font-weight: bold;}
-.swiper_tab>li.active a {color:#00d6d6;}
+.swiper_tab>li.active a {color:#00d6d6;-webkit-user-select:none;}
 .swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
   border-radius: 5px;background-clip: padding-box
 }
@@ -96,7 +96,7 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .list_con {padding-left: 1.25rem}
 .list_dept {font-size: 1rem;color:#747c83; }
 .wx_icon,
-.tel_icon {display: inline-block;vertical-align: middle;width:3rem;height:3rem;}
+.tel_icon {display: inline-block;vertical-align: middle;width:3rem;height:3rem;-webkit-user-select:none;}
 .wx_icon {
   background: url(../images/icon/icon-wx.png) no-repeat;background-size: contain;
 }
