@@ -60,13 +60,13 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .swiper_tab>li {padding-right: 2.5rem;}
 .swiper_tab>li a {position: relative;display: block;padding-top:2rem;padding-bottom: 2rem;font-size: 1.2rem;}
 .swiper_tab>li.active a {color:#00d6d6;}
-.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
+/*.swiper_tab>li.active a:before {content: '';position: absolute;left: 0;right: 0;bottom: 0;height: 2px;background-color:#00d6d6;
   border-radius: 5px;background-clip: padding-box
 }
 .swiper_tab>li.active a:after{position: absolute;
   content: '';bottom: -5px;left: 0;right: 0;height:5px;
   background: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(220,220,220,0.1))
-}
+}*/
 
 .boxModal {display: box;display: -webkit-box;display: -moz-box;}
 /*swiper*/
@@ -87,10 +87,12 @@ i[class*="_ico"] {display: inline-block;vertical-align: middle;}
 .list_name {margin-bottom: .5rem}
 .list_con {padding-left: 1.25rem}
 .list_dept {font-size: 1rem;color:#747c83; }
-.wx_icon {display: inline-block;vertical-align: middle;width:3rem;height:3rem;
+.wx_icon,
+.tel_icon {display: inline-block;vertical-align: middle;width:3rem;height:3rem;}
+.wx_icon {
   background: url(../images/icon/icon-wx.png) no-repeat;background-size: contain;
 }
-.tel_icon {display: inline-block;vertical-align: middle;width:3rem;height:3rem;
+.tel_icon {
   background: url(../images/icon/icon-tel.png) no-repeat;background-size: contain;
 }
 .avator {width: 4rem;height: 4rem;border-radius: 100%;background-clip: padding-box}
