@@ -14,9 +14,9 @@ function clearValue(){
     $('[data-role="js-hide-del"]').hide();
 }
 function search(){
-    console.log('搜索');
+    alert('搜索');
     highLight('.search_ipt');
-    setScrollCss();
+    setTimeout(setScrollCss,500);
     return  false
 }
 
