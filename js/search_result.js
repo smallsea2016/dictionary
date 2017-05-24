@@ -42,10 +42,7 @@ function toggleContent(_this){
         currItem = $(_this).next('[data-role="toggle_item"]');
     item.not(currItem).hide();
     currItem.slideToggle();
-    // var pos = $(_this).offset().top;
-    // $('#main').animate({scrollTop:pos}, 300,function(){
-    // 	currItem.slideToggle();
-    // });
+    setScrollCss();
 }
 
 /*滚动加载*/
