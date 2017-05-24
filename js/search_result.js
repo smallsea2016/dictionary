@@ -16,6 +16,7 @@ function clearValue(){
 function search(){
     console.log('搜索');
     highLight('.search_ipt');
+    setScrollCss();
     return  false
 }
 
