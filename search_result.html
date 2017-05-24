@@ -23,7 +23,7 @@
 </head>
 <body class="bgWhite">
     <div id="wrap">
-        <header class="abs_top" id="header">
+        <header class="abs_top" id="header" data-role="top-height">
             <form method="" action="#" onsubmit="search()">
                 <section class="search_wrap">
                     <a href="javascript:history.go(-1);" class="go_back"></a>
@@ -34,11 +34,11 @@
                 </section>
             </form>
         </header>
-        <div id="main" class="nice_scroll">
+        <div id="main" style="overflow: hidden">
             <div style="height:5rem"></div>
             <div class="main_inner">
-                <div class="p20-15">我们为您搜索到以下有关<mark class="search_mark">EE</mark>的信息：</div>
-                <div class="swiper_tab_wrap" id="arrays">
+                <div class="p20-15" data-role="top-height">我们为您搜索到以下有关<mark class="search_mark">EE</mark>的信息：</div>
+                <div class="swiper_tab_wrap" data-role="top-height">
                     <div class="ib">
                         <ul class="swiper_tab" id="js-swiper-tab">
                             <li class="active"><a href="javascript:;">PEOPLE</a></li>
@@ -48,10 +48,15 @@
                         <!-- <div class="swiper-scrollbar"></div> -->
                     </div>
                 </div>
-                <div class="swiper-container">
+                <div class="swiper-container" data-role="highlight">
                     <div class="swiper-wrapper boxModal">
                         <!--PEOPLE-->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-role="scroll-height" id="js-people">
+                            <!--没有搜索到结果-->
+                            <aside class="attention" style="display: none">
+                                <img src="images/icon/attention-icon.png">
+                                <p>没有搜索到相关信息换个关键词试试</p>
+                            </aside>
                             <ul class="dict_list">
                                 <li>
                                     <section class="list_section flexbox" data-role="js_toggle" onclick="toggleContent(this);">
@@ -134,7 +139,12 @@
                             </ul>
                         </div>
                         <!--DICTIONARY-->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-role="scroll-height" id="js-dictionary">
+                            <!--没有搜索到结果-->
+                            <aside class="attention" style="display: none">
+                                <img src="images/icon/attention-icon.png">
+                                <p>没有搜索到相关信息换个关键词试试</p>
+                            </aside>
                             <ul class="dict_list">
                                 <li>
                                     <section class="list_section flexbox" data-role="js_toggle" onclick="toggleContent(this)">
@@ -151,11 +161,16 @@
                                             <dd class="contact_con">子工程又称“弱电技术”或“信息技术”。可进一步细分为电测量技术、调整技术以及电子技术。电子工程，是电气工程的一个子类，是面向电子领域的工程学。在今天其研究对象已经超出了电子领域。</dd>
                                         </dl>
                                     </article>
-                                </li>
+                                </li>                                
                             </ul>
                         </div>
                         <!--NIO FAQ-->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" data-role="scroll-height" onscroll="scrollFn(this)" id="js-FAQ">
+                            <!--没有搜索到结果-->
+                            <aside class="attention" style="display: none">
+                                <img src="images/icon/attention-icon.png">
+                                <p>没有搜索到相关信息换个关键词试试</p>
+                            </aside>
                             <ul class="dict_list">
                                 <li>
                                     <section class="list_section flexbox" data-role="js_toggle" onclick="toggleContent(this)">
@@ -184,16 +199,12 @@
                                         2017报销流程新方法
                                     </section>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--没有搜索到结果-->
-            <aside class="attention" style="display: none">
-                <img src="images/icon/attention-icon.png">
-                <p>没有搜索到相关信息换个关键词试试</p>
-            </aside>
         </div>
     </div>
 
@@ -201,6 +212,8 @@
     <!--loading-->
     <script type="text/javascript" src="js/loading.js"></script>
     <script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
-    <script type="text/javascript" src="js/search_result.js"></script><!---->
+     <!--搜索高亮-->
+    <script type="text/javascript" src="js/highlight.js"></script>
+    <script type="text/javascript" src="js/search_result.js"></script>
 </body>
 </html>
