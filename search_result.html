@@ -52,11 +52,6 @@
                     <div class="swiper-wrapper boxModal">
                         <!--PEOPLE-->
                         <div class="swiper-slide" data-role="scroll-height" id="js-people">
-                            <!--没有搜索到结果-->
-                            <aside class="attention" style="display: none">
-                                <img src="images/icon/attention-icon.png">
-                                <p>没有搜索到相关信息换个关键词试试</p>
-                            </aside>
                             <ul class="dict_list">
                                 <li>
                                     <section class="list_section flexbox" data-role="js_toggle" onclick="toggleContent(this);">
@@ -140,11 +135,6 @@
                         </div>
                         <!--DICTIONARY-->
                         <div class="swiper-slide" data-role="scroll-height" id="js-dictionary">
-                            <!--没有搜索到结果-->
-                            <aside class="attention" style="display: none">
-                                <img src="images/icon/attention-icon.png">
-                                <p>没有搜索到相关信息换个关键词试试</p>
-                            </aside>
                             <ul class="dict_list">
                                 <li>
                                     <section class="list_section flexbox" data-role="js_toggle" onclick="toggleContent(this)">
@@ -166,11 +156,6 @@
                         </div>
                         <!--NIO FAQ-->
                         <div class="swiper-slide" data-role="scroll-height" onscroll="scrollFn(this)" id="js-FAQ">
-                            <!--没有搜索到结果-->
-                            <aside class="attention" style="display: none">
-                                <img src="images/icon/attention-icon.png">
-                                <p>没有搜索到相关信息换个关键词试试</p>
-                            </aside>
                             <ul class="dict_list">
                                 <li>
                                     <section class="list_section flexbox" data-role="js_toggle" onclick="toggleContent(this)">
@@ -206,6 +191,15 @@
                 </div>
             </div>
         </div>
+
+
+        <!--没有搜索到结果-->
+        <aside class="attention" id="attention" style="display: none">
+            <img src="images/icon/attention-icon.png">
+            <p>没有搜索到相关信息换个关键词试试</p>
+            <p class="pt20 pb20">或者</p>
+            <p class="for_help"><a href="#">去helpdesk寻求帮助</a></p>
+        </aside>
     </div>
 
     <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
@@ -215,5 +209,17 @@
      <!--搜索高亮-->
     <script type="text/javascript" src="js/highlight.js"></script>
     <script type="text/javascript" src="js/search_result.js"></script>
+    <script type="text/javascript">
+        _showLoading();
+        /*没有搜索到结果*/
+        function noMatch(){
+            $('#main').hide();
+            $('#attention').show();
+        }
+        // noMatch();
+
+        /*页面超时*/
+        // toast(0,'页面超时');
+    </script>
 </body>
 </html>

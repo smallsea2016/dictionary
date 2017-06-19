@@ -70,18 +70,20 @@ function errorTips(text){
 }
 
 /**
-  * 提交提示
+  * toast提示
   * @param states 成功为1，失败为0
   * @param str 成功或失败的提示文字
 */
 function toast(states,str){
-  str = str || '提交状态';
+  var str = str || '返回错误';
   if(! $('#ui_toast').length){
 	  	var toast = '';
-			   toast+= '<div class="ui_toast" id="ui_toast">';
-	       toast+=   '<i class="toast_ico toast_faild_ico"></i>';
-	       toast+=   '<p class="toast_text">'+str+'</p>';
-	       toast+=  '</div>';
+			toast+= '<aside class="ui_toast" id="ui_toast">';
+			toast+=		'<div class="ui_toast_inner">';
+			toast+=   		'<i class="toast_ico toast_faild_ico"></i>';
+	       	toast+=   		'<p class="toast_text">'+str+'</p>';
+	       	toast+=  	'</div>';
+	       	toast+=  '</aside>';
       $('body').append(toast);
     }else{
       $('#ui_toast').show();
